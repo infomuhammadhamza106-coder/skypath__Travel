@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holiday Packages — Affordable All-Inclusive Holidays | Euro Path Travel</title>
+  <meta name="description" content="Browse our curated holiday packages to Dubai, Maldives, Greece, Caribbean and more. All-inclusive deals with flights, hotels and transfers.">
+  <meta property="og:title" content="Holiday Packages — Euro Path Travel">
+  <meta property="og:description" content="Explore affordable all-inclusive holiday packages to top destinations worldwide.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header transparent" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo"><img src="images/logo-white.png" alt="Euro Path Travel"><div class="logo-text"><span class="brand-name"><span class="gold">Euro</span> Path</span><span class="brand-tagline">Travel Agency</span></div></a>
+        <nav class="nav">
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="holiday-packages.html" class="active">Holiday Packages</a>
+            <a href="flights.html">Flights</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <a href="flights.html" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="holiday-packages.html">Holiday Packages</a>
+      <a href="flights.html">Flights</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="flights.html" class="btn btn-primary" style="margin-top:16px;">Get a Quote</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Holiday Packages</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">›</span>
+          <span class="current">Holiday Packages</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PACKAGES WITH FILTERS ===== -->
+    <section class="section" id="packages-list">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Our Packages</span>
+          <h2>Explore Holiday Destinations</h2>
+          <p>Filter by region and find your perfect getaway from our handpicked collection of holiday packages.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All Destinations</button>
+          <button class="filter-btn" data-filter="middle-east">Middle East</button>
+          <button class="filter-btn" data-filter="asia">Asia</button>
+          <button class="filter-btn" data-filter="europe">Europe</button>
+          <button class="filter-btn" data-filter="caribbean">Caribbean</button>
+          <button class="filter-btn" data-filter="africa">Africa</button>
+        </div>
+
+        <!-- Package Grid -->
+        <div class="grid grid-3 stagger-children">
+          
+          <!-- Dubai -->
+          <div class="package-card reveal" data-category="middle-east">
+            <div class="package-img">
+              <img src="images/dubai.png" alt="Dubai luxury holiday package" loading="lazy">
+              <span class="package-badge">🔥 Best Seller</span>
+            </div>
+            <div class="package-body">
+              <div class="package-meta">
+                <span class="package-meta-item">📅 7 Nights</span>
+                <span class="package-meta-item">⭐ 5 Star</span>
+                <span class="package-meta-item">✈ Flights Inc.</span>
+              </div>
+              <h3>Luxury Dubai Experience</h3>
+              <p>5-star hotel in Dubai Marina with desert safari, city tour, and Burj Khalifa tickets included.</p>
+              <div class="package-footer">
+                <div class="package-price">£799 <small>per person</small></div>
+                <a href="#package-enquiry" class="btn btn-primary btn-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maldives -->
+          <div class="package-card reveal" data-category="asia">
+            <div class="package-img">
+              <img src="images/maldives.png" alt="Maldives all inclusive holiday" loading="lazy">
+              <span class="package-badge">💎 Luxury</span>
+            </div>
+            <div class="package-body">
+              <div class="package-meta">
+                <span class="package-meta-item">📅 10 Nights</span>
+                <span class="package-meta-item">⭐ 5 Star</span>
+                <span class="package-meta-item">✈ All Inclusive</span>
+              </div>
+              <h3>Maldives Paradise Escape</h3>
+              <p>Overwater villa with all-inclusive dining, spa treatments, and snorkelling excursions.</p>
+              <div class="package-footer">
+                <div class="package-price">£1,899 <small>per person</small></div>
+                <a href="#package-enquiry" class="btn btn-primary btn-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Greece -->
+          <div class="package-card reveal" data-category="europe">
+            <div class="package-img">
+              <img src="images/greece.png" alt="Greek island hopping holiday" loading="lazy">
+              <span class="package-badge">✨ Popular</span>
+            </div>
+            <div class="package-body">
+              <div class="package-meta">
+                <span class="package-meta-item">📅 14 Nights</span>
+                <span class="package-meta-item">⭐ 4 Star</span>
+                <span class="package-meta-item">✈ Half Board</span>
+              </div>
+              <h3>Greek Island Adventure</h3>
+              <p>Island-hop across Santorini, Mykonos, and Crete with boutique hotels and Greek dining.</p>
+              <div class="package-footer">
+                <div class="package-price">£699 <small>per person</small></div>
+                <a href="#package-enquiry" class="btn btn-primary btn-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thailand -->
+          <div class="package-card reveal" data-category="asia">
+            <div class="package-img">
+              <img src="images/thailand.png" alt="Thailand beach holiday" loading="lazy">
+              <span class="package-badge">🌟 Top Rated</span>
+            </div>
+            <div class="package-body">
+              <div class="package-meta">
+                <span class="package-meta-item">📅 10 Nights</span>
+                <span class="package-meta-item">⭐ 4 Star</span>
+                <span class="package-meta-item">✈ B&B</span>
+              </div>
+              <h3>Thailand Beach & Culture</h3>
+              <p>Explore Bangkok's temples and relax on Phuket's pristine beaches. Cultural tours included.</p>
+              <div class="package-footer">
+                <div class="package-price">£599 <small>per person</small></div>
+                <a href="#package-enquiry" class="btn btn-primary btn-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Caribbean -->
+          <div class="package-card reveal" data-category="caribbean">
+            <div class="package-img">
+              <img src="images/caribbean.png" alt="Caribbean all inclusive holiday" loading="lazy">
+              <span class="package-badge">🏖 Beach</span>
+            </div>
+            <div class="package-body">
+              <div class="package-meta">
+                <span class="package-meta-item">📅 7 Nights</span>
+                <span class="package-meta-item">⭐ 5 Star</span>
+                <span class="package-meta-item">✈ All Inclusive</span>
+              </div>
+              <h3>Caribbean Bliss</h3>
+              <p>Luxuriate on pristine Caribbean beaches with all-inclusive dining, water sports, and more.</p>
+              <div class="package-footer">
+                <div class="package-price">£1,199 <small>per person</small></div>
+                <a href="#package-enquiry" class="btn btn-primary btn-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bali -->
+          <div class="package-card reveal" data-category="asia">
+            <div class="package-img">
+              <img src="images/bali.png" alt="Bali cultural holiday" loading="lazy">
+              <span class="package-badge">🌿 Wellness</span>
+            </div>
+            <div class="package-body">
+              <div class="package-meta">
+                <span class="package-meta-item">📅 12 Nights</span>
+                <span class="package-meta-item">⭐ 4 Star</span>
+                <span class="package-meta-item">✈ Half Board</span>
+              </div>
+              <h3>Bali Wellness Retreat</h3>
+              <p>Yoga retreats, rice terrace treks, temple visits, and beachside relaxation in paradise.</p>
+              <div class="package-footer">
+                <div class="package-price">£749 <small>per person</small></div>
+                <a href="#package-enquiry" class="btn btn-primary btn-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PACKAGE ENQUIRY FORM ===== -->
+    <section class="section bg-light" id="package-enquiry">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Enquire Now</span>
+          <h2>Request a Holiday Quote</h2>
+          <p>Fill in the form below and our team will find the best deal for your dream holiday.</p>
+        </div>
+
+        <div class="multistep-form reveal">
+          <div class="form-progress">
+            <div class="progress-step active">
+              <span class="step-num">1</span>
+              <span class="step-label">Destination</span>
+            </div>
+            <div class="progress-step">
+              <span class="step-num">2</span>
+              <span class="step-label">Dates & Guests</span>
+            </div>
+            <div class="progress-step">
+              <span class="step-num">3</span>
+              <span class="step-label">Your Details</span>
+            </div>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" style="width:0%"></div>
+          </div>
+
+          <form>
+            <!-- Honeypot -->
+            <div class="honey-pot">
+              <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-steps-container">
+              <!-- Step 1 -->
+              <div class="form-step active">
+                <h3>Where Would You Like to Go?</h3>
+                <div class="form-group">
+                  <label>Destination <span class="required">*</span></label>
+                  <select class="form-input" name="destination" required>
+                    <option value="">Select destination</option>
+                    <option>Dubai</option>
+                    <option>Maldives</option>
+                    <option>Greece</option>
+                    <option>Thailand</option>
+                    <option>Caribbean</option>
+                    <option>Bali</option>
+                    <option>Turkey</option>
+                    <option>Egypt</option>
+                    <option>Spain</option>
+                    <option>Other</option>
+                  </select>
+                  <span class="form-error">Please select a destination</span>
+                </div>
+                <div class="form-group">
+                  <label>Budget (per person)</label>
+                  <select class="form-input" name="budget">
+                    <option value="">Select budget range</option>
+                    <option>Under £500</option>
+                    <option>£500 - £1,000</option>
+                    <option>£1,000 - £2,000</option>
+                    <option>£2,000 - £3,000</option>
+                    <option>£3,000+</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Hotel Rating</label>
+                  <select class="form-input" name="hotel_rating">
+                    <option value="">Any</option>
+                    <option>3 Star</option>
+                    <option>4 Star</option>
+                    <option>5 Star</option>
+                  </select>
+                </div>
+                <div class="form-nav">
+                  <div></div>
+                  <button type="button" class="btn btn-primary btn-next">Next Step →</button>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="form-step">
+                <h3>Travel Dates & Guests</h3>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Check-in Date <span class="required">*</span></label>
+                    <input type="date" class="form-input" name="checkin" required>
+                    <span class="form-error">Please select a date</span>
+                  </div>
+                  <div class="form-group">
+                    <label>Duration</label>
+                    <select class="form-input" name="duration">
+                      <option>7 Nights</option>
+                      <option>10 Nights</option>
+                      <option>14 Nights</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Board Basis</label>
+                  <select class="form-input" name="board">
+                    <option>Room Only</option>
+                    <option>Bed & Breakfast</option>
+                    <option>Half Board</option>
+                    <option>Full Board</option>
+                    <option>All Inclusive</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Guests</label>
+                  <div class="passenger-counter">
+                    <div class="passenger-info"><h4>Adults</h4><p>12+ years</p></div>
+                    <div class="counter-controls">
+                      <button type="button" class="counter-btn counter-minus" data-min="1">−</button>
+                      <span class="counter-value">2</span>
+                      <button type="button" class="counter-btn counter-plus" data-max="9">+</button>
+                    </div>
+                  </div>
+                  <div class="passenger-counter">
+                    <div class="passenger-info"><h4>Children</h4><p>2-11 years</p></div>
+                    <div class="counter-controls">
+                      <button type="button" class="counter-btn counter-minus" data-min="0">−</button>
+                      <span class="counter-value">0</span>
+                      <button type="button" class="counter-btn counter-plus" data-max="6">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-nav">
+                  <button type="button" class="btn btn-outline btn-prev">← Back</button>
+                  <button type="button" class="btn btn-primary btn-next">Next Step →</button>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="form-step">
+                <h3>Your Contact Details</h3>
+                <div class="form-group">
+                  <label>Full Name <span class="required">*</span></label>
+                  <input type="text" class="form-input" name="name" placeholder="John Smith" required>
+                  <span class="form-error">Please enter your name</span>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Email <span class="required">*</span></label>
+                    <input type="email" class="form-input" name="email" placeholder="john@example.com" required>
+                    <span class="form-error">Please enter a valid email</span>
+                  </div>
+                  <div class="form-group">
+                    <label>Phone / WhatsApp <span class="required">*</span></label>
+                    <input type="tel" class="form-input" name="phone" placeholder="+44 7xxx xxx xxx" required>
+                    <span class="form-error">Please enter your phone number</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Additional Notes</label>
+                  <textarea class="form-input" name="notes" placeholder="Any special requirements, preferences, or questions..." rows="3"></textarea>
+                </div>
+                <div class="form-nav">
+                  <button type="button" class="btn btn-outline btn-prev">← Back</button>
+                  <button type="button" class="btn btn-primary btn-lg btn-submit">Submit Enquiry ✓</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Confirmation -->
+            <div class="form-confirmation" style="display:none;">
+              <div class="confirmation-icon">✓</div>
+              <h2>Thank You!</h2>
+              <p>Your holiday enquiry has been received. One of our travel experts will contact you within 30 minutes with the best available deals.</p>
+              <a href="index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY BOOK WITH US ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-4 stagger-children">
+          <div class="feature-card reveal">
+            <div class="feature-icon">🛡</div>
+            <h3>Secure Booking</h3>
+            <p>Every package is handled with full care and transparency for your peace of mind.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">💰</div>
+            <h3>Price Match</h3>
+            <p>Found it cheaper elsewhere? We'll match it or beat it, guaranteed.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🎯</div>
+            <h3>Tailor-Made</h3>
+            <p>Every package is customised to your preferences and budget.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">📞</div>
+            <h3>Expert Support</h3>
+            <p>Our travel consultants are available 7 days a week to help.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="reveal">Can't Find What You're Looking For?</h2>
+        <p class="reveal">Our travel experts can create a completely bespoke holiday package tailored just for you.</p>
+        <div class="reveal"><a href="contact.html" class="btn btn-primary btn-lg">Speak to an Expert →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo"><img src="images/logo-white.png" alt="Euro Path Travel"><div class="logo-text"><span class="brand-name"><span class="gold">Euro</span> Path</span><span class="brand-tagline">Travel Agency</span></div></a>
+          <p>Euro Path Travel is a UK-based travel agency specialising in affordable flights and tailor-made holiday packages.</p>
+          <div class="footer-social">
+            <a href="#">f</a><a href="#">𝕏</a><a href="#">◻</a><a href="#">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="holiday-packages.html">Holiday Packages</a></li>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="#">Dubai</a></li><li><a href="#">Maldives</a></li>
+            <li><a href="#">Turkey</a></li><li><a href="#">Greece</a></li>
+            <li><a href="#">Caribbean</a></li><li><a href="#">Thailand</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><span class="footer-contact-icon">📞</span><div><a href="tel:+442012345678" style="color:rgba(255,255,255,0.6);">020 1234 5678</a></div></li>
+            <li><span class="footer-contact-icon">✉</span><div><a href="mailto:info@europathtravel.co.uk" style="color:rgba(255,255,255,0.6);">info@europathtravel.co.uk</a></div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Euro Path Travel. All rights reserved.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">🌍 Europe Specialists</span>
+          <span class="footer-badge">✈ IATA Accredited</span>
+        </div>
+        <p class="footer-disclaimer">EuroPath Travel is an independent travel consultancy providing appointment assistance, travel documentation guidance, flight bookings, and holiday planning services. We are not affiliated with any government authority, embassy, consulate, or official processing centre.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

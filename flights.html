@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Enquiry — Cheap Flights from UK | Euro Path Travel</title>
+  <meta name="description" content="Find the cheapest flights from the UK to worldwide destinations. Economy, Business & First Class deals. Get a free flight quote from Euro Path Travel.">
+  <meta property="og:title" content="Flight Enquiry — Euro Path Travel">
+  <meta property="og:description" content="Get the best flight deals from the UK. Free quotes within 30 minutes.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header transparent" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo"><img src="images/logo-white.png" alt="Euro Path Travel"><div class="logo-text"><span class="brand-name"><span class="gold">Euro</span> Path</span><span class="brand-tagline">Travel Agency</span></div></a>
+        <nav class="nav">
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="holiday-packages.html">Holiday Packages</a>
+            <a href="flights.html" class="active">Flights</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <a href="flights.html" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <div class="mobile-nav">
+      <a href="index.html">Home</a><a href="holiday-packages.html">Holiday Packages</a>
+      <a href="flights.html">Flights</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      <a href="flights.html" class="btn btn-primary" style="margin-top:16px;">Get a Quote</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Flight Enquiry</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><span class="separator">›</span><span class="current">Flights</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FLIGHT ENQUIRY FORM ===== -->
+    <section class="section" id="flight-enquiry">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Flight Enquiry</span>
+          <h2>Find Your Perfect Flight</h2>
+          <p>Tell us where you want to go and we'll find you the best deals. Our experts respond within 30 minutes.</p>
+        </div>
+
+        <div class="multistep-form reveal">
+          <div class="form-progress">
+            <div class="progress-step active">
+              <span class="step-num">1</span>
+              <span class="step-label">Flight Details</span>
+            </div>
+            <div class="progress-step">
+              <span class="step-num">2</span>
+              <span class="step-label">Passengers</span>
+            </div>
+            <div class="progress-step">
+              <span class="step-num">3</span>
+              <span class="step-label">Contact Info</span>
+            </div>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" style="width:0%"></div>
+          </div>
+
+          <form>
+            <div class="honey-pot">
+              <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-steps-container">
+              <!-- Step 1: Flight Details -->
+              <div class="form-step active">
+                <h3>Flight Details</h3>
+                
+                <!-- Trip Type -->
+                <div class="form-group">
+                  <label>Trip Type</label>
+                  <div class="trip-type-toggle">
+                    <button type="button" class="trip-type-btn" data-trip="oneway">One Way</button>
+                    <button type="button" class="trip-type-btn active" data-trip="return">Return</button>
+                    <button type="button" class="trip-type-btn" data-trip="multicity">Multi-City</button>
+                  </div>
+                  <input type="hidden" name="trip_type" value="return">
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Departure Airport <span class="required">*</span></label>
+                    <select class="form-input" name="departure" required>
+                      <option value="">Select airport</option>
+                      <option>London Heathrow (LHR)</option>
+                      <option>London Gatwick (LGW)</option>
+                      <option>London Stansted (STN)</option>
+                      <option>London Luton (LTN)</option>
+                      <option>London City (LCY)</option>
+                      <option>Manchester (MAN)</option>
+                      <option>Birmingham (BHX)</option>
+                      <option>Edinburgh (EDI)</option>
+                      <option>Glasgow (GLA)</option>
+                      <option>Bristol (BRS)</option>
+                      <option>Leeds Bradford (LBA)</option>
+                      <option>Newcastle (NCL)</option>
+                      <option>Liverpool (LPL)</option>
+                      <option>Cardiff (CWL)</option>
+                      <option>Belfast (BFS)</option>
+                      <option>Other</option>
+                    </select>
+                    <span class="form-error">Please select departure airport</span>
+                  </div>
+                  <div class="form-group">
+                    <label>Destination Airport <span class="required">*</span></label>
+                    <input type="text" class="form-input" name="destination" placeholder="e.g. Dubai (DXB)" required>
+                    <span class="form-error">Please enter destination</span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Departure Date <span class="required">*</span></label>
+                    <input type="date" class="form-input" name="departure_date" required>
+                    <span class="form-error">Please select departure date</span>
+                  </div>
+                  <div class="form-group return-date-group">
+                    <label>Return Date <span class="required">*</span></label>
+                    <input type="date" class="form-input" name="return_date" required>
+                    <span class="form-error">Please select return date</span>
+                  </div>
+                </div>
+
+                <div class="form-nav">
+                  <div></div>
+                  <button type="button" class="btn btn-primary btn-next">Next Step →</button>
+                </div>
+              </div>
+
+              <!-- Step 2: Passengers -->
+              <div class="form-step">
+                <h3>Passengers & Preferences</h3>
+                
+                <div class="form-group">
+                  <label>Passengers</label>
+                  <div class="passenger-counter">
+                    <div class="passenger-info"><h4>Adults</h4><p>12+ years</p></div>
+                    <div class="counter-controls">
+                      <button type="button" class="counter-btn counter-minus" data-min="1">−</button>
+                      <span class="counter-value">1</span>
+                      <button type="button" class="counter-btn counter-plus" data-max="9">+</button>
+                    </div>
+                  </div>
+                  <div class="passenger-counter">
+                    <div class="passenger-info"><h4>Children</h4><p>2-11 years</p></div>
+                    <div class="counter-controls">
+                      <button type="button" class="counter-btn counter-minus" data-min="0">−</button>
+                      <span class="counter-value">0</span>
+                      <button type="button" class="counter-btn counter-plus" data-max="6">+</button>
+                    </div>
+                  </div>
+                  <div class="passenger-counter">
+                    <div class="passenger-info"><h4>Infants</h4><p>Under 2 years</p></div>
+                    <div class="counter-controls">
+                      <button type="button" class="counter-btn counter-minus" data-min="0">−</button>
+                      <span class="counter-value">0</span>
+                      <button type="button" class="counter-btn counter-plus" data-max="4">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Cabin Class</label>
+                  <select class="form-input" name="cabin_class">
+                    <option>Economy</option>
+                    <option>Premium Economy</option>
+                    <option>Business Class</option>
+                    <option>First Class</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Are Your Dates Flexible?</label>
+                  <div class="trip-type-toggle">
+                    <button type="button" class="trip-type-btn active" data-trip="no">No</button>
+                    <button type="button" class="trip-type-btn" data-trip="yes">Yes (±3 days)</button>
+                  </div>
+                  <input type="hidden" name="flexible_dates" value="no">
+                </div>
+
+                <div class="form-nav">
+                  <button type="button" class="btn btn-outline btn-prev">← Back</button>
+                  <button type="button" class="btn btn-primary btn-next">Next Step →</button>
+                </div>
+              </div>
+
+              <!-- Step 3: Contact Info -->
+              <div class="form-step">
+                <h3>Your Contact Details</h3>
+                <div class="form-group">
+                  <label>Full Name <span class="required">*</span></label>
+                  <input type="text" class="form-input" name="name" placeholder="John Smith" required>
+                  <span class="form-error">Please enter your name</span>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Email Address <span class="required">*</span></label>
+                    <input type="email" class="form-input" name="email" placeholder="john@example.com" required>
+                    <span class="form-error">Please enter a valid email</span>
+                  </div>
+                  <div class="form-group">
+                    <label>Phone / WhatsApp <span class="required">*</span></label>
+                    <input type="tel" class="form-input" name="phone" placeholder="+44 7xxx xxx xxx" required>
+                    <span class="form-error">Please enter your phone number</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Additional Notes</label>
+                  <textarea class="form-input" name="notes" rows="3" placeholder="Any specific requirements, preferred airlines, layover preferences..."></textarea>
+                </div>
+                <div class="form-nav">
+                  <button type="button" class="btn btn-outline btn-prev">← Back</button>
+                  <button type="button" class="btn btn-primary btn-lg btn-submit">Submit Flight Enquiry ✓</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Confirmation -->
+            <div class="form-confirmation" style="display:none;">
+              <div class="confirmation-icon">✓</div>
+              <h2>Enquiry Received!</h2>
+              <p>Our flight experts are searching for the best deals for you. We'll be in touch within 30 minutes with your personalised quote.</p>
+              <a href="index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY BOOK FLIGHTS ===== -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Why Euro Path</span>
+          <h2>Why Book Flights With Us?</h2>
+        </div>
+        <div class="grid grid-3 stagger-children">
+          <div class="feature-card reveal">
+            <div class="feature-icon">💰</div>
+            <h3>Exclusive Fares</h3>
+            <p>Access to wholesale fares not available online. We negotiate directly with airlines to get you the lowest prices.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🔄</div>
+            <h3>Flexible Booking</h3>
+            <p>Change your flights with minimal fees. We offer flexible booking options and free date changes on select fares.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🎯</div>
+            <h3>All Airlines</h3>
+            <p>We search across all major airlines including Emirates, BA, Qatar Airways, Turkish Airlines, and budget carriers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POPULAR ROUTES ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Popular Routes</span>
+          <h2>Trending Flight Routes</h2>
+          <p>Our most popular routes with the best deals right now.</p>
+        </div>
+        <div class="grid grid-4 stagger-children">
+          <div class="feature-card reveal" style="cursor:pointer;" onclick="location.href='#flight-enquiry'">
+            <div class="feature-icon">🇦🇪</div>
+            <h3>London → Dubai</h3>
+            <p style="color:var(--secondary);font-weight:700;font-size:1.1rem;">From £289</p>
+          </div>
+          <div class="feature-card reveal" style="cursor:pointer;" onclick="location.href='#flight-enquiry'">
+            <div class="feature-icon">🇹🇷</div>
+            <h3>London → Istanbul</h3>
+            <p style="color:var(--secondary);font-weight:700;font-size:1.1rem;">From £199</p>
+          </div>
+          <div class="feature-card reveal" style="cursor:pointer;" onclick="location.href='#flight-enquiry'">
+            <div class="feature-icon">🇹🇭</div>
+            <h3>London → Bangkok</h3>
+            <p style="color:var(--secondary);font-weight:700;font-size:1.1rem;">From £389</p>
+          </div>
+          <div class="feature-card reveal" style="cursor:pointer;" onclick="location.href='#flight-enquiry'">
+            <div class="feature-icon">🇺🇸</div>
+            <h3>London → New York</h3>
+            <p style="color:var(--secondary);font-weight:700;font-size:1.1rem;">From £329</p>
+          </div>
+          <div class="feature-card reveal" style="cursor:pointer;" onclick="location.href='#flight-enquiry'">
+            <div class="feature-icon">🇲🇻</div>
+            <h3>London → Maldives</h3>
+            <p style="color:var(--secondary);font-weight:700;font-size:1.1rem;">From £449</p>
+          </div>
+          <div class="feature-card reveal" style="cursor:pointer;" onclick="location.href='#flight-enquiry'">
+            <div class="feature-icon">🇵🇰</div>
+            <h3>London → Islamabad</h3>
+            <p style="color:var(--secondary);font-weight:700;font-size:1.1rem;">From £349</p>
+          </div>
+          <div class="feature-card reveal" style="cursor:pointer;" onclick="location.href='#flight-enquiry'">
+            <div class="feature-icon">🇪🇬</div>
+            <h3>London → Cairo</h3>
+            <p style="color:var(--secondary);font-weight:700;font-size:1.1rem;">From £229</p>
+          </div>
+          <div class="feature-card reveal" style="cursor:pointer;" onclick="location.href='#flight-enquiry'">
+            <div class="feature-icon">🇬🇷</div>
+            <h3>London → Athens</h3>
+            <p style="color:var(--secondary);font-weight:700;font-size:1.1rem;">From £149</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="reveal">Need Help Finding the Right Flight?</h2>
+        <p class="reveal">Our team searches thousands of routes daily to find you the absolute best deal.</p>
+        <div class="reveal"><a href="contact.html" class="btn btn-primary btn-lg">Call Us Now →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo"><img src="images/logo-white.png" alt="Euro Path Travel"><div class="logo-text"><span class="brand-name"><span class="gold">Euro</span> Path</span><span class="brand-tagline">Travel Agency</span></div></a>
+          <p>Euro Path Travel — your trusted UK travel agency for affordable flights and holiday packages.</p>
+          <div class="footer-social"><a href="#">f</a><a href="#">𝕏</a><a href="#">◻</a><a href="#">in</a></div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li><li><a href="holiday-packages.html">Holidays</a></li>
+            <li><a href="flights.html">Flights</a></li><li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="#">Dubai</a></li><li><a href="#">Maldives</a></li>
+            <li><a href="#">Turkey</a></li><li><a href="#">Thailand</a></li>
+            <li><a href="#">Caribbean</a></li><li><a href="#">Greece</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><span class="footer-contact-icon">📞</span><div><a href="tel:+442012345678" style="color:rgba(255,255,255,0.6);">020 1234 5678</a></div></li>
+            <li><span class="footer-contact-icon">✉</span><div><a href="mailto:info@europathtravel.co.uk" style="color:rgba(255,255,255,0.6);">info@europathtravel.co.uk</a></div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Euro Path Travel. All rights reserved.</p>
+        <div class="footer-badges"><span class="footer-badge">🌍 Europe Specialists</span><span class="footer-badge">✈ IATA</span></div>
+        <p class="footer-disclaimer">EuroPath Travel is an independent travel consultancy providing appointment assistance, travel documentation guidance, flight bookings, and holiday planning services. We are not affiliated with any government authority, embassy, consulate, or official processing centre.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
