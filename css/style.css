@@ -29,6 +29,7 @@
   
   /* Typography */
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
@@ -122,14 +123,15 @@ button { cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--dark);
+  font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
 }
 
-h1 { font-size: var(--fs-5xl); }
-h2 { font-size: var(--fs-3xl); }
-h3 { font-size: var(--fs-xl); }
-h4 { font-size: var(--fs-lg); }
+h1 { font-size: var(--fs-5xl); font-weight: 800; letter-spacing: -0.5px; }
+h2 { font-size: var(--fs-3xl); font-weight: 700; }
+h3 { font-size: var(--fs-xl); font-weight: 600; }
+h4 { font-size: var(--fs-lg); font-family: var(--font); font-weight: 600; }
 
 p { margin-bottom: var(--space-md); }
 
