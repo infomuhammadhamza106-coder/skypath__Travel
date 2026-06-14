@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearchTabs();
   initMultiStepForm();
   initFilterButtons();
+  initVisaInquiryForm();
   initQuickEnquiry();
   initContactForm();
 });
@@ -528,6 +529,91 @@ function initQuickEnquiry() {
         btn.style.background = '';
         form.reset();
       }, 4000);
+    });
+  });
+}
+
+/* ---------- Schengen Visa Inquiry Form ---------- */
+function initVisaInquiryForm() {
+  const form = document.getElementById('visa-inquiry-form');
+  if (!form) return;
+
+  const step1 = document.getElementById('vstep-1');
+  const step2 = document.getElementById('vstep-2');
+  const progressSteps = document.querySelectorAll('.visa-progress-step');
+  const confirm = document.getElementById('visa-confirm');
+  const formBody = form.closest('.visa-form-body');
+
+  function validateFields(stepEl) {
+    let valid = true;
+    stepEl.querySelectorAll('[required]').forEach(field => {
+      field.classList.remove('verr');
+      if (!field.value.trim()) {
+        field.classList.add('verr');
+        valid = false;
+      }
+      if (field.type === 'email' && field.value.trim()) {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim())) {
+          field.classList.add('verr');
+          valid = false;
+        }
+      }
+    });
+    return valid;
+  }
+
+  function setProgress(activeStep) {
+    progressSteps.forEach(ps => {
+      const n = parseInt(ps.dataset.vstep);
+      ps.classList.remove('active', 'done');
+      if (n < activeStep) ps.classList.add('done');
+      if (n === activeStep) ps.classList.add('active');
+    });
+  }
+
+  // Next button
+  const nextBtn = form.querySelector('.visa-next');
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (!validateFields(step1)) return;
+      step1.classList.remove('active');
+      step2.classList.add('active');
+      setProgress(2);
+      form.closest('.visa-form-card') && form.closest('.visa-form-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
+
+  // Back button
+  const prevBtn = form.querySelector('.visa-prev');
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      step2.classList.remove('active');
+      step1.classList.add('active');
+      setProgress(1);
+    });
+  }
+
+  // Clear error on change
+  form.querySelectorAll('input, select, textarea').forEach(field => {
+    field.addEventListener('input', () => field.classList.remove('verr'));
+    field.addEventListener('change', () => field.classList.remove('verr'));
+  });
+
+  // Submit
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!validateFields(step2)) return;
+
+    const formData = new FormData(form);
+
+    submitToWeb3Forms(formData, form, () => {
+      form.style.display = 'none';
+      const card = form.closest('.visa-form-card');
+      if (card) {
+        const prog = card.querySelector('.visa-progress');
+        if (prog) prog.style.display = 'none';
+      }
+      if (confirm) confirm.style.display = 'block';
     });
   });
 }
