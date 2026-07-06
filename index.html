@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18291988415"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18291988415');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Euro Path Travel — Premium Flights & Holiday Packages | UK Travel Agency</title>
@@ -456,10 +465,15 @@
 
               <!-- Confirmation -->
               <div class="visa-confirm" id="visa-confirm">
-                <div class="visa-confirm-icon">✓</div>
-                <h3>Enquiry Received!</h3>
-                <p>Thank you! Our Schengen visa specialists will contact you within <strong>30 minutes</strong> to discuss your application.</p>
-                <a href="contact.html" class="btn btn-outline" style="margin-top:16px;">Contact Us</a>
+                <div class="success-anim">
+                  <svg viewBox="0 0 52 52" aria-hidden="true">
+                    <circle class="success-circle" cx="26" cy="26" r="24" fill="none"/>
+                    <path class="success-tick" fill="none" d="M15 27l8 8 15-16"/>
+                  </svg>
+                </div>
+                <h3 class="success-text-1">Thank You!</h3>
+                <p class="success-text-2">Your enquiry has been received. Our Schengen visa specialists will contact you within <strong>30 minutes</strong> to discuss your application.</p>
+                <a href="contact.html" class="btn btn-outline success-text-3" style="margin-top:16px;">Contact Us</a>
               </div>
             </div>
           </div>

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18291988415"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18291988415');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flight Enquiry — Cheap Flights from UK | Euro Path Travel</title>
@@ -244,10 +253,15 @@
 
             <!-- Confirmation -->
             <div class="form-confirmation" style="display:none;">
-              <div class="confirmation-icon">✓</div>
-              <h2>Enquiry Received!</h2>
-              <p>Our flight experts are searching for the best deals for you. We'll be in touch within 30 minutes with your personalised quote.</p>
-              <a href="index.html" class="btn btn-primary">Back to Home</a>
+              <div class="success-anim">
+                <svg viewBox="0 0 52 52" aria-hidden="true">
+                  <circle class="success-circle" cx="26" cy="26" r="24" fill="none"/>
+                  <path class="success-tick" fill="none" d="M15 27l8 8 15-16"/>
+                </svg>
+              </div>
+              <h2 class="success-text-1">Thank You!</h2>
+              <p class="success-text-2">Your enquiry has been received. Our flight experts are searching for the best deals for you and will be in touch within 30 minutes with your personalised quote.</p>
+              <a href="index.html" class="btn btn-primary success-text-3">Back to Home</a>
             </div>
           </form>
         </div>

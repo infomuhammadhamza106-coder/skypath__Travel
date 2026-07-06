@@ -2818,18 +2818,108 @@ select.form-input {
     --fs-4xl: 1.5rem;
     --fs-3xl: 1.35rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .hero-buttons .btn {
     width: 100%;
   }
-  
+
   .btn-lg {
     padding: 16px 30px;
     font-size: var(--fs-base);
+  }
+}
+
+/* ---------- Animated Success Confirmation ---------- */
+.success-anim {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto var(--space-lg);
+  border-radius: 50%;
+  background: rgba(16,185,129,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: successPop 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+}
+
+.success-anim::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(16,185,129,0.35);
+  animation: successRing 1.8s ease-out 0.9s infinite;
+}
+
+.success-anim svg {
+  width: 60px;
+  height: 60px;
+}
+
+.success-circle {
+  stroke: var(--success, #10B981);
+  stroke-width: 2.5;
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+  animation: successDraw 0.7s ease-out 0.3s forwards;
+}
+
+.success-tick {
+  stroke: var(--success, #10B981);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: successDraw 0.45s ease-out 0.85s forwards;
+}
+
+.success-text-1,
+.success-text-2,
+.success-text-3 {
+  opacity: 0;
+  animation: successRise 0.55s ease-out forwards;
+}
+
+.success-text-1 { animation-delay: 0.45s; }
+.success-text-2 { animation-delay: 0.65s; }
+.success-text-3 { animation-delay: 0.85s; }
+
+@keyframes successPop {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes successDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes successRing {
+  from { transform: scale(1); opacity: 0.8; }
+  to { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes successRise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .success-anim,
+  .success-anim::after,
+  .success-circle,
+  .success-tick,
+  .success-text-1,
+  .success-text-2,
+  .success-text-3 {
+    animation: none;
+    opacity: 1;
+    stroke-dashoffset: 0;
   }
 }
