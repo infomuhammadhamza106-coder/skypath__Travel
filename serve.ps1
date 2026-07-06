@@ -3,7 +3,7 @@ $port = 8080
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add("http://localhost:$port/")
 $listener.Start()
-Write-Host "Serving at http://localhost:$port/ — press Ctrl+C to stop"
+Write-Host "Serving at http://localhost:$port/ - press Ctrl+C to stop"
 
 $mimeTypes = @{
   '.html' = 'text/html; charset=utf-8'

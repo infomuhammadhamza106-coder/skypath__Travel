@@ -23,8 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ---------- Web3Forms Submission Helper ---------- */
 async function submitToWeb3Forms(formData, formElement, successCallback) {
-  // Add API key
-  formData.append('access_key', WEB3FORMS_KEY);
+  // Add API key — Web3Forms rejects the request if the key appears twice
+  // (some forms already include it as a hidden input)
+  if (!formData.has('access_key')) {
+    formData.append('access_key', WEB3FORMS_KEY);
+  }
   
   // Find submit button
   const submitBtn = formElement.querySelector('[type="submit"], .btn-submit');
@@ -640,7 +643,7 @@ function initContactForm() {
 
     const formData = new FormData(form);
     const subject = formData.get('subject') || 'General Enquiry';
-    formData.append('subject', `📩 ${subject} — Euro Path Travel`);
+    formData.set('subject', `📩 ${subject} — Euro Path Travel`);
     formData.append('form_type', 'Contact Form');
     
     submitToWeb3Forms(formData, form, () => {
