@@ -107,6 +107,104 @@
     </div>
   </div>
 
+  <!-- ===== SEND A QUERY MODAL ===== -->
+  <div class="query-modal-overlay" id="query-modal-overlay">
+    <div class="query-modal">
+      <button type="button" class="query-modal-close" id="query-modal-close" aria-label="Close">&times;</button>
+      <div class="query-modal-body">
+        <h3 class="query-modal-title">Get A Quote</h3>
+        <p class="query-modal-sub">Share your details and our visa specialists will call you back shortly.</p>
+
+        <form id="query-form" novalidate>
+          <input type="hidden" name="access_key" value="928235df-5d4d-4fe7-bce0-ea703df89a52">
+          <input type="hidden" name="subject" value="📝 New Query — EuroPath Travel">
+          <input type="hidden" name="form_type" value="Homepage Query Form">
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="visa-field">
+            <label>Name <span class="req">*</span></label>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="visa-field">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="visa-field">
+            <label>Contact <span class="req">*</span></label>
+            <div class="visa-phone-wrap">
+              <span class="visa-phone-prefix">🇬🇧 +44</span>
+              <input type="tel" name="contact" placeholder="Phone no / WhatsApp" required>
+            </div>
+          </div>
+          <div class="visa-field">
+            <label>Nationality <span class="req">*</span></label>
+            <select name="nationality" required>
+              <option value="">Select your nationality</option>
+              <option>Pakistani</option>
+              <option>Indian</option>
+              <option>Bangladeshi</option>
+              <option>Nigerian</option>
+              <option>Ghanaian</option>
+              <option>Sri Lankan</option>
+              <option>Nepalese</option>
+              <option>Afghan</option>
+              <option>Egyptian</option>
+              <option>Turkish</option>
+              <option>Iranian</option>
+              <option>Iraqi</option>
+              <option>Zimbabwean</option>
+              <option>South African</option>
+              <option>Chinese</option>
+              <option>Filipino</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="visa-field">
+            <label>UK Visa Status <span class="req">*</span></label>
+            <select name="uk_visa_status" required>
+              <option value="">Your UK visa status</option>
+              <option>British Citizen</option>
+              <option>ILR (Indefinite Leave to Remain)</option>
+              <option>EU Settled Status</option>
+              <option>EU Pre-Settled Status</option>
+              <option>Skilled Worker Visa</option>
+              <option>Student Visa</option>
+              <option>Graduate Visa</option>
+              <option>Family / Spouse Visa</option>
+              <option>Visitor Visa</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="visa-field">
+            <label>Best Time To Call <span class="req">*</span></label>
+            <select name="best_time_to_call" required>
+              <option value="">Select best time to call</option>
+              <option>Morning (9AM – 12PM)</option>
+              <option>Afternoon (12PM – 4PM)</option>
+              <option>Evening (4PM – 8PM)</option>
+              <option>Anytime</option>
+            </select>
+          </div>
+
+          <div class="visa-actions">
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Submit Query</button>
+          </div>
+        </form>
+
+        <div class="visa-confirm" id="query-confirm">
+          <div class="success-anim">
+            <svg viewBox="0 0 52 52" aria-hidden="true">
+              <circle class="success-circle" cx="26" cy="26" r="24" fill="none"/>
+              <path class="success-tick" fill="none" d="M15 27l8 8 15-16"/>
+            </svg>
+          </div>
+          <h3 class="success-text-1">Thank You!</h3>
+          <p class="success-text-2">Your query has been received. Redirecting you now…</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main>
     <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="hero">
@@ -129,12 +227,12 @@
             </p>
             
             <div class="hero-buttons">
-              <a href="contact.html" class="btn btn-primary btn-lg">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
-                Book Appointment
-              </a>
+              <button type="button" id="open-query-btn" class="btn btn-primary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Send a Query
+              </button>
               <a href="contact.html" class="btn btn-outline-white btn-lg">Request a Call Back</a>
-              <a href="contact.html" class="btn btn-secondary btn-lg">Speak With An Expert</a>
+              <a href="https://wa.me/447737140585" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Speak With An Expert</a>
             </div>
 
             <div class="hero-stats">

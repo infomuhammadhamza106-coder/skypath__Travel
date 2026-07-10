@@ -257,6 +257,18 @@ p { margin-bottom: var(--space-md); }
   font-size: var(--fs-sm);
 }
 
+.btn-whatsapp {
+  background: #25D366;
+  color: var(--white);
+  border-color: #25D366;
+}
+
+.btn-whatsapp:hover {
+  background: #1DA851;
+  border-color: #1DA851;
+  transform: translateY(-2px);
+}
+
 .btn-lg {
   padding: 18px 40px;
   font-size: var(--fs-md);
@@ -2425,6 +2437,81 @@ select.form-input {
 @media (max-width: 600px) {
   .visa-row { grid-template-columns: 1fr; }
   .visa-form-body { padding: var(--space-lg); }
+}
+
+/* ---------- Send a Query Modal ---------- */
+.query-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(7,30,61,0.75);
+  backdrop-filter: blur(6px);
+  z-index: 1200;
+  opacity: 0;
+  pointer-events: none;
+  padding: var(--space-lg);
+  transition: opacity var(--transition-base);
+}
+
+.query-modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.query-modal {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(11,45,91,0.3);
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(20px) scale(0.98);
+  transition: transform var(--transition-base);
+}
+
+.query-modal-overlay.active .query-modal {
+  transform: translateY(0) scale(1);
+}
+
+.query-modal-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 34px; height: 34px;
+  border: none; background: #f5f7fa;
+  border-radius: 50%;
+  font-size: 1.4rem; line-height: 1;
+  color: var(--dark);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition-fast);
+  z-index: 2;
+}
+.query-modal-close:hover { background: #ebeef3; color: var(--secondary); }
+
+.query-modal-body { padding: var(--space-xl); }
+
+.query-modal-title {
+  font-size: var(--fs-xl);
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+
+.query-modal-sub {
+  color: var(--body-text);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.query-modal-body form .visa-field { margin-bottom: var(--space-md); }
+
+body.query-modal-open { overflow: hidden; }
+
+@media (max-width: 600px) {
+  .query-modal-body { padding: var(--space-lg); }
 }
 
 /* ---------- Disclaimer Section ---------- */

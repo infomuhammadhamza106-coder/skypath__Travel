@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initVisaInquiryForm();
   initQuickEnquiry();
   initContactForm();
+  initQueryModal();
 });
 
 /* ---------- Web3Forms Submission Helper ---------- */
@@ -648,6 +649,80 @@ function initContactForm() {
     
     submitToWeb3Forms(formData, form, () => {
       window.location.href = 'thank-you.html';
+    });
+  });
+}
+
+/* ---------- Send a Query Modal (Homepage) ---------- */
+function initQueryModal() {
+  const openBtn = document.getElementById('open-query-btn');
+  const overlay = document.getElementById('query-modal-overlay');
+  const closeBtn = document.getElementById('query-modal-close');
+  const form = document.getElementById('query-form');
+  const confirm = document.getElementById('query-confirm');
+  if (!openBtn || !overlay || !form) return;
+
+  function openModal() {
+    overlay.classList.add('active');
+    document.body.classList.add('query-modal-open');
+  }
+
+  function closeModal() {
+    overlay.classList.remove('active');
+    document.body.classList.remove('query-modal-open');
+  }
+
+  openBtn.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+  });
+
+  function validateFields() {
+    let valid = true;
+    form.querySelectorAll('[required]').forEach(field => {
+      field.classList.remove('verr');
+      if (!field.value.trim()) {
+        field.classList.add('verr');
+        valid = false;
+      }
+      if (field.type === 'email' && field.value.trim()) {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim())) {
+          field.classList.add('verr');
+          valid = false;
+        }
+      }
+    });
+    return valid;
+  }
+
+  form.querySelectorAll('input, select').forEach(field => {
+    field.addEventListener('input', () => field.classList.remove('verr'));
+    field.addEventListener('change', () => field.classList.remove('verr'));
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!validateFields()) return;
+
+    // Honeypot check
+    const honeypot = form.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value.trim() !== '') return;
+
+    const formData = new FormData(form);
+
+    submitToWeb3Forms(formData, form, () => {
+      form.style.display = 'none';
+      if (confirm) confirm.style.display = 'block';
+
+      setTimeout(() => {
+        window.location.href = 'thank-you.html';
+      }, 1800);
     });
   });
 }
