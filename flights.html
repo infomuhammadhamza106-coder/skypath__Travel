@@ -9,6 +9,7 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-18291988415');
+    gtag('config', 'G-J966X2J82V');
   </script>
   <!-- Meta Pixel Code -->
   <script>
@@ -56,7 +57,7 @@
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
           </div>
-          <a href="flights.html" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
+          <button type="button" class="btn btn-primary btn-sm nav-cta open-consultation-btn">Book Your Consultation</button>
         </nav>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       </div>
@@ -66,7 +67,80 @@
     <div class="mobile-nav">
       <a href="index.html">Home</a><a href="holiday-packages.html">Holiday Packages</a>
       <a href="flights.html">Flights</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
-      <a href="flights.html" class="btn btn-primary" style="margin-top:16px;">Get a Quote</a>
+      <button type="button" class="btn btn-primary open-consultation-btn" style="margin-top:16px;">Book Your Consultation</button>
+    </div>
+  </div>
+
+  <!-- ===== BOOK YOUR CONSULTATION MODAL ===== -->
+  <div class="query-modal-overlay" id="consultation-modal-overlay">
+    <div class="query-modal">
+      <button type="button" class="query-modal-close" id="consultation-modal-close" aria-label="Close">&times;</button>
+      <div class="query-modal-body">
+        <h3 class="query-modal-title">Book Your Consultation</h3>
+        <p class="query-modal-sub">Complete the form below, and our visa consultant will get in touch with you as soon as possible.</p>
+
+        <form id="consultation-form" novalidate>
+          <input type="hidden" name="access_key" value="928235df-5d4d-4fe7-bce0-ea703df89a52">
+          <input type="hidden" name="subject" value="📅 New Consultation Booking — EuroPath Travel">
+          <input type="hidden" name="form_type" value="Consultation Booking">
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="visa-field">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="visa-field">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="visa-field">
+            <label>Phone <span class="req">*</span></label>
+            <input type="tel" name="phone" placeholder="+44 7xxx xxx xxx" required>
+          </div>
+          <div class="visa-field">
+            <label>Nationality <span class="req">*</span></label>
+            <select name="nationality" required>
+              <option value="">Select your nationality</option>
+              <option>Pakistani</option>
+              <option>Indian</option>
+              <option>Bangladeshi</option>
+              <option>Nigerian</option>
+              <option>Ghanaian</option>
+              <option>Sri Lankan</option>
+              <option>Nepalese</option>
+              <option>Afghan</option>
+              <option>Egyptian</option>
+              <option>Turkish</option>
+              <option>Iranian</option>
+              <option>Iraqi</option>
+              <option>Zimbabwean</option>
+              <option>South African</option>
+              <option>Chinese</option>
+              <option>Filipino</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="visa-field">
+            <label>Message <span class="req">*</span></label>
+            <textarea name="message" rows="3" placeholder="Tell us about your travel plans or questions..." required></textarea>
+          </div>
+
+          <div class="visa-actions">
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Book Consultation</button>
+          </div>
+        </form>
+
+        <div class="visa-confirm" id="consultation-confirm">
+          <div class="success-anim">
+            <svg viewBox="0 0 52 52" aria-hidden="true">
+              <circle class="success-circle" cx="26" cy="26" r="24" fill="none"/>
+              <path class="success-tick" fill="none" d="M15 27l8 8 15-16"/>
+            </svg>
+          </div>
+          <h3 class="success-text-1">Thank You!</h3>
+          <p class="success-text-2">Your consultation request has been received. Redirecting you now…</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -263,7 +337,7 @@
                 </div>
                 <div class="form-nav">
                   <button type="button" class="btn btn-outline btn-prev">← Back</button>
-                  <button type="button" class="btn btn-primary btn-lg btn-submit">Submit Flight Enquiry ✓</button>
+                  <button type="button" class="btn btn-primary btn-lg btn-submit">Submit Flight Enquiry</button>
                 </div>
               </div>
             </div>

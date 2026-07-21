@@ -9,6 +9,7 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-18291988415');
+    gtag('config', 'G-J966X2J82V');
   </script>
   <!-- Meta Pixel Code -->
   <script>
@@ -59,9 +60,9 @@
     "telephone": "+44-20-1234-5678",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Travel House, High Street",
+      "streetAddress": "SIU Offices, 4-6 Greatorex Street",
       "addressLocality": "London",
-      "postalCode": "EC1A 1BB",
+      "postalCode": "E1 5NF",
       "addressCountry": "GB"
     }
   }
@@ -85,7 +86,7 @@
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
           </div>
-          <a href="flights.html" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
+          <button type="button" class="btn btn-primary btn-sm nav-cta open-consultation-btn">Book Your Consultation</button>
         </nav>
         
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -103,7 +104,7 @@
       <a href="flights.html">Flights</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
-      <a href="flights.html" class="btn btn-primary" style="margin-top:16px;">Get a Quote</a>
+      <button type="button" class="btn btn-primary open-consultation-btn" style="margin-top:16px;">Book Your Consultation</button>
     </div>
   </div>
 
@@ -113,7 +114,7 @@
       <button type="button" class="query-modal-close" id="query-modal-close" aria-label="Close">&times;</button>
       <div class="query-modal-body">
         <h3 class="query-modal-title">Get A Quote</h3>
-        <p class="query-modal-sub">Share your details and our visa specialists will call you back shortly.</p>
+        <p class="query-modal-sub">Complete the form below, and our visa consultant will get in touch with you as soon as possible.</p>
 
         <form id="query-form" novalidate>
           <input type="hidden" name="access_key" value="928235df-5d4d-4fe7-bce0-ea703df89a52">
@@ -205,34 +206,102 @@
     </div>
   </div>
 
+  <!-- ===== BOOK YOUR CONSULTATION MODAL ===== -->
+  <div class="query-modal-overlay" id="consultation-modal-overlay">
+    <div class="query-modal">
+      <button type="button" class="query-modal-close" id="consultation-modal-close" aria-label="Close">&times;</button>
+      <div class="query-modal-body">
+        <h3 class="query-modal-title">Book Your Consultation</h3>
+        <p class="query-modal-sub">Complete the form below, and our visa consultant will get in touch with you as soon as possible.</p>
+
+        <form id="consultation-form" novalidate>
+          <input type="hidden" name="access_key" value="928235df-5d4d-4fe7-bce0-ea703df89a52">
+          <input type="hidden" name="subject" value="📅 New Consultation Booking — EuroPath Travel">
+          <input type="hidden" name="form_type" value="Consultation Booking">
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="visa-field">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="visa-field">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="visa-field">
+            <label>Phone <span class="req">*</span></label>
+            <input type="tel" name="phone" placeholder="+44 7xxx xxx xxx" required>
+          </div>
+          <div class="visa-field">
+            <label>Nationality <span class="req">*</span></label>
+            <select name="nationality" required>
+              <option value="">Select your nationality</option>
+              <option>Pakistani</option>
+              <option>Indian</option>
+              <option>Bangladeshi</option>
+              <option>Nigerian</option>
+              <option>Ghanaian</option>
+              <option>Sri Lankan</option>
+              <option>Nepalese</option>
+              <option>Afghan</option>
+              <option>Egyptian</option>
+              <option>Turkish</option>
+              <option>Iranian</option>
+              <option>Iraqi</option>
+              <option>Zimbabwean</option>
+              <option>South African</option>
+              <option>Chinese</option>
+              <option>Filipino</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="visa-field">
+            <label>Message <span class="req">*</span></label>
+            <textarea name="message" rows="3" placeholder="Tell us about your travel plans or questions..." required></textarea>
+          </div>
+
+          <div class="visa-actions">
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Book Consultation</button>
+          </div>
+        </form>
+
+        <div class="visa-confirm" id="consultation-confirm">
+          <div class="success-anim">
+            <svg viewBox="0 0 52 52" aria-hidden="true">
+              <circle class="success-circle" cx="26" cy="26" r="24" fill="none"/>
+              <path class="success-tick" fill="none" d="M15 27l8 8 15-16"/>
+            </svg>
+          </div>
+          <h3 class="success-text-1">Thank You!</h3>
+          <p class="success-text-2">Your consultation request has been received. Redirecting you now…</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main>
     <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="hero">
       <div class="hero-bg">
-        <img src="images/hero-bg.png" alt="Beautiful tropical beach destination" loading="eager">
+        <img src="images/hero-bg.jpg" alt="Historic European skyline at golden hour" loading="eager">
       </div>
       <div class="hero-overlay"></div>
       
       <div class="container">
         <div class="hero-content hero-content--centered">
           <div class="hero-text hero-text--centered">
-            <div class="hero-badge pulse">
-              <span>✦</span> Your Gateway to Europe Starts Here
-            </div>
-            
-            <h1>Discover Your Dream <span class="highlight">Holiday</span> With Us</h1>
-            
+            <h1>Your European <span class="highlight">Dream</span> Starts Here</h1>
+
             <p class="hero-desc">
-              We assist travellers with appointment booking, application preparation, flights, and holiday packages, providing expert support throughout the entire travel process.
+              Support for Schengen travel preparation, document review, and appointment guidance for UK residents.
             </p>
-            
+
             <div class="hero-buttons">
-              <button type="button" id="open-query-btn" class="btn btn-primary btn-lg">
+              <a href="contact.html" class="btn btn-primary btn-lg">Book Your Consultation</a>
+              <button type="button" id="open-query-btn" class="btn btn-outline-white btn-lg">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                Send a Query
+                Send an Inquiry
               </button>
-              <a href="contact.html" class="btn btn-outline-white btn-lg">Request a Call Back</a>
-              <a href="https://wa.me/447737140585" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Speak With An Expert</a>
             </div>
 
             <div class="hero-stats">
@@ -383,8 +452,8 @@
           
           <div class="step-item">
             <div class="step-number">4</div>
-            <h4>Pack Your Bags</h4>
-            <p>Flights and hotels booked once approved — you're all set!</p>
+            <h4>Travel With Confidence</h4>
+            <p>Flights and hotels confirmed once your application is approved</p>
           </div>
         </div>
       </div>
@@ -628,7 +697,7 @@
 
         <div class="grid grid-3 stagger-children">
           <div class="dest-card reveal">
-            <img src="images/paris.png" alt="Paris Eiffel Tower at sunset" loading="lazy">
+            <img src="images/paris.jpg" alt="Paris Eiffel Tower at sunset" loading="lazy">
             <div class="dest-card-overlay">
               <h3>🇫🇷 Paris, France</h3>
               <p class="dest-desc">Romantic streets, world-famous attractions, and timeless elegance.</p>
@@ -638,7 +707,7 @@
           </div>
 
           <div class="dest-card reveal">
-            <img src="images/rome.png" alt="Rome Colosseum and ancient ruins" loading="lazy">
+            <img src="images/rome.jpg" alt="Rome Colosseum and ancient ruins" loading="lazy">
             <div class="dest-card-overlay">
               <h3>🇮🇹 Rome, Italy</h3>
               <p class="dest-desc">Ancient history, incredible cuisine, and unforgettable architecture.</p>
@@ -648,7 +717,7 @@
           </div>
 
           <div class="dest-card reveal">
-            <img src="images/barcelona.png" alt="Barcelona Sagrada Familia and coastline" loading="lazy">
+            <img src="images/barcelona.jpg" alt="Barcelona Sagrada Familia and coastline" loading="lazy">
             <div class="dest-card-overlay">
               <h3>🇪🇸 Barcelona, Spain</h3>
               <p class="dest-desc">Beautiful beaches, vibrant culture, and stunning landmarks.</p>
@@ -658,7 +727,7 @@
           </div>
 
           <div class="dest-card reveal">
-            <img src="images/greece.png" alt="Athens Acropolis and Greek Islands" loading="lazy">
+            <img src="images/greece.jpg" alt="Oia, Santorini at sunset" loading="lazy">
             <div class="dest-card-overlay">
               <h3>🇬🇷 Athens & Greek Islands</h3>
               <p class="dest-desc">Historic wonders combined with breathtaking island escapes.</p>
@@ -668,7 +737,7 @@
           </div>
 
           <div class="dest-card reveal">
-            <img src="images/amsterdam.png" alt="Amsterdam canals and historic architecture" loading="lazy">
+            <img src="images/amsterdam.jpg" alt="Amsterdam canals and historic architecture" loading="lazy">
             <div class="dest-card-overlay">
               <h3>🇳🇱 Amsterdam, Netherlands</h3>
               <p class="dest-desc">Picturesque canals, museums, and a unique European atmosphere.</p>
@@ -678,7 +747,7 @@
           </div>
 
           <div class="dest-card reveal">
-            <img src="images/switzerland.png" alt="Switzerland mountains and alpine scenery" loading="lazy">
+            <img src="images/switzerland.jpg" alt="Matterhorn and Swiss Alps scenery" loading="lazy">
             <div class="dest-card-overlay">
               <h3>🇨🇭 Switzerland</h3>
               <p class="dest-desc">Majestic mountains, scenic train journeys, and luxury experiences.</p>
@@ -791,7 +860,7 @@
           
           <div class="package-card reveal">
             <div class="package-img">
-              <img src="images/greece.png" alt="Greek island hopping holiday" loading="lazy">
+              <img src="images/greece.jpg" alt="Greek island hopping holiday" loading="lazy">
               <span class="package-badge">✨ Popular</span>
             </div>
             <div class="package-body">
@@ -1057,7 +1126,7 @@
               <span class="footer-contact-icon">📍</span>
               <div>
                 <strong style="color:var(--white);">Visit Us</strong><br>
-                123 Travel House, High Street<br>London, EC1A 1BB
+                SIU Offices, 4-6 Greatorex Street<br>London, E1 5NF, United Kingdom
               </div>
             </li>
             <li>
