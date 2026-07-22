@@ -725,6 +725,11 @@ function initConsultationModal() {
       }, 1800);
     });
   });
+
+  // Auto-open when the page is loaded with ?open=consultation (e.g. from an ad's landing URL)
+  if (new URLSearchParams(window.location.search).get('open') === 'consultation') {
+    openModal();
+  }
 }
 
 /* ---------- Send a Query Modal (Homepage) ---------- */
