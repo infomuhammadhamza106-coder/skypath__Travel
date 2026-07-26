@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMultiStepForm();
   initFilterButtons();
   initVisaInquiryForm();
-  initQuickEnquiry();
   initContactForm();
   initQueryModal();
   initConsultationModal();
@@ -504,36 +503,6 @@ function initFilterButtons() {
           item.style.display = 'none';
         }
       });
-    });
-  });
-}
-
-/* ---------- Quick Enquiry (Homepage callback form) ---------- */
-function initQuickEnquiry() {
-  const form = document.getElementById('quick-enquiry-form');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(form);
-    formData.append('subject', '📞 Quick Callback Request — Euro Path Travel');
-    formData.append('form_type', 'Quick Callback');
-    
-    const btn = form.querySelector('.btn');
-    
-    submitToWeb3Forms(formData, form, () => {
-      const originalText = btn.textContent;
-      btn.textContent = '✓ Enquiry Sent!';
-      btn.style.background = '#10B981';
-      btn.disabled = false;
-      btn.style.opacity = '1';
-      
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        form.reset();
-      }, 4000);
     });
   });
 }
