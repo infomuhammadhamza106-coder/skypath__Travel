@@ -703,12 +703,12 @@ function initConsultationModal() {
 
 /* ---------- Send a Query Modal (Homepage) ---------- */
 function initQueryModal() {
-  const openBtn = document.getElementById('open-query-btn');
+  const openBtns = document.querySelectorAll('.open-query-btn');
   const overlay = document.getElementById('query-modal-overlay');
   const closeBtn = document.getElementById('query-modal-close');
   const form = document.getElementById('query-form');
   const confirm = document.getElementById('query-confirm');
-  if (!openBtn || !overlay || !form) return;
+  if (!openBtns.length || !overlay || !form) return;
 
   function openModal() {
     overlay.classList.add('active');
@@ -720,7 +720,7 @@ function initQueryModal() {
     document.body.classList.remove('query-modal-open');
   }
 
-  openBtn.addEventListener('click', openModal);
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
   overlay.addEventListener('click', (e) => {
